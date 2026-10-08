@@ -1,0 +1,762 @@
+/* ==========================================
+   CONFIGURACIÓ GENERAL
+========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background-color: #f5f3f7;
+
+    color: #29252d;
+
+    min-height: 100vh;
+
+}
+
+
+/* ==========================================
+   CAPÇALERA
+========================================== */
+
+header {
+
+    background: linear-gradient(
+        135deg,
+        #6c4ab6,
+        #8c68d1
+    );
+
+    color: white;
+
+    padding: 30px 20px;
+
+}
+
+
+header h1 {
+
+    font-size: 32px;
+
+    margin-bottom: 5px;
+
+}
+
+
+header p {
+
+    opacity: 0.9;
+
+}
+
+
+/* ==========================================
+   NAVEGACIÓ
+========================================== */
+
+nav {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    background-color: white;
+
+    padding: 10px;
+
+    box-shadow:
+        0 2px 10px
+        rgba(0, 0, 0, 0.05);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+
+}
+
+
+.nav-boto {
+
+    border: none;
+
+    background: transparent;
+
+    color: #666;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+}
+
+
+.nav-boto:hover {
+
+    background-color: #f0ecf7;
+
+}
+
+
+.nav-boto.actiu {
+
+    background-color: #eee7fa;
+
+    color: #6c4ab6;
+
+    font-weight: bold;
+
+}
+
+
+/* ==========================================
+   CONTINGUT
+========================================== */
+
+main {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 25px 20px;
+
+}
+
+
+.seccio {
+
+    display: block;
+
+}
+
+
+.amagada {
+
+    display: none;
+
+}
+
+
+.benvinguda {
+
+    margin-bottom: 20px;
+
+}
+
+
+.benvinguda h2 {
+
+    font-size: 26px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.benvinguda p {
+
+    color: #777;
+
+}
+
+
+/* ==========================================
+   TARGETES
+========================================== */
+
+.targeta,
+.targeta-progres,
+.consell {
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0, 0, 0, 0.05);
+
+}
+
+
+.targeta-progres {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+/* ==========================================
+   CERCLE DE PROGRÉS
+========================================== */
+
+.cercle-progres {
+
+    width: 100px;
+
+    height: 100px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: #eee7fa;
+
+    color: #6c4ab6;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+}
+
+
+.targeta-progres h3 {
+
+    margin-bottom: 5px;
+
+}
+
+
+.targeta-progres p {
+
+    color: #777;
+
+}
+
+
+/* ==========================================
+   CAPÇALERES DE SECCIÓ
+========================================== */
+
+.capcalera-seccio {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+
+}
+
+
+.capcalera-seccio h2 {
+
+    font-size: 21px;
+
+}
+
+
+/* ==========================================
+   BOTONS
+========================================== */
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+}
+
+
+.boto-principal {
+
+    background-color: #6c4ab6;
+
+    color: white;
+
+    border-radius: 12px;
+
+    padding: 11px 16px;
+
+    font-weight: bold;
+
+}
+
+
+.boto-principal:hover {
+
+    opacity: 0.85;
+
+}
+
+
+.boto-secundari {
+
+    background-color: #e3e1e5;
+
+    color: #333;
+
+    border-radius: 12px;
+
+    padding: 11px 16px;
+
+    margin-left: 5px;
+
+}
+
+
+/* ==========================================
+   HÀBITS
+========================================== */
+
+.habit {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    padding: 15px;
+
+    margin-bottom: 10px;
+
+    box-shadow:
+        0 2px 8px
+        rgba(0, 0, 0, 0.04);
+
+}
+
+
+.habit-esquerra {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.habit input {
+
+    width: 20px;
+
+    height: 20px;
+
+    accent-color: #6c4ab6;
+
+}
+
+
+.habit-completat {
+
+    text-decoration: line-through;
+
+    opacity: 0.45;
+
+}
+
+
+.boto-eliminar {
+
+    background: transparent;
+
+    font-size: 18px;
+
+}
+
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+input[type="text"] {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    border: 2px solid #ddd;
+
+    margin-top: 8px;
+
+    margin-bottom: 12px;
+
+    font-size: 15px;
+
+}
+
+
+input[type="text"]:focus {
+
+    outline: none;
+
+    border-color: #6c4ab6;
+
+}
+
+
+label {
+
+    font-weight: bold;
+
+}
+
+
+/* ==========================================
+   OBJECTIUS
+========================================== */
+
+.descripcio {
+
+    color: #666;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+
+}
+
+
+.recomanacions {
+
+    margin-top: 20px;
+
+}
+
+
+.recomanacio {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background-color: #eee7fa;
+
+    padding: 15px;
+
+    border-radius: 14px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.boto-afegir-recomanacio {
+
+    background-color: #6c4ab6;
+
+    color: white;
+
+    padding: 8px 12px;
+
+    border-radius: 10px;
+
+    white-space: nowrap;
+
+}
+
+
+/* ==========================================
+   MALS HÀBITS
+========================================== */
+
+.estrategia {
+
+    margin-top: 20px;
+
+}
+
+
+.pas-estrategia {
+
+    background-color: white;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+    margin-bottom: 10px;
+
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.05);
+
+}
+
+
+.pas-estrategia h3 {
+
+    color: #6c4ab6;
+
+    margin-bottom: 6px;
+
+}
+
+
+.pas-estrategia p {
+
+    color: #666;
+
+    line-height: 1.5;
+
+}
+
+
+/* ==========================================
+   CONSELL
+========================================== */
+
+.consell {
+
+    background-color: #eee7fa;
+
+}
+
+
+.consell h3 {
+
+    margin-bottom: 8px;
+
+}
+
+
+.consell p {
+
+    color: #555;
+
+    line-height: 1.5;
+
+}
+
+
+/* ==========================================
+   ESTADÍSTIQUES
+========================================== */
+
+.estadistiques-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.estadistica {
+
+    background-color: white;
+
+    padding: 20px 10px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 12px
+        rgba(0, 0, 0, 0.05);
+
+}
+
+
+.estadistica span {
+
+    display: block;
+
+    font-size: 25px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.estadistica strong {
+
+    display: block;
+
+    font-size: 24px;
+
+    color: #6c4ab6;
+
+}
+
+
+.estadistica p {
+
+    color: #777;
+
+    font-size: 13px;
+
+    margin-top: 5px;
+
+}
+
+
+/* ==========================================
+   BARRA DE PROGRÉS
+========================================== */
+
+.barra {
+
+    width: 100%;
+
+    height: 15px;
+
+    background-color: #e6e3e8;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin: 15px 0;
+
+}
+
+
+.barra-interior {
+
+    height: 100%;
+
+    width: 0%;
+
+    background-color: #6c4ab6;
+
+    border-radius: 20px;
+
+    transition: width 0.4s;
+
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #888;
+
+    font-size: 13px;
+
+}
+
+
+/* ==========================================
+   MÒBIL
+========================================== */
+
+@media (max-width: 650px) {
+
+    nav {
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+    }
+
+
+    .nav-boto {
+
+        white-space: nowrap;
+
+    }
+
+
+    main {
+
+        padding: 18px 12px;
+
+    }
+
+
+    .targeta-progres {
+
+        padding: 15px;
+
+    }
+
+
+    .cercle-progres {
+
+        width: 80px;
+
+        height: 80px;
+
+        font-size: 19px;
+
+    }
+
+
+    .estadistiques-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .recomanacio {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .boto-afegir-recomanacio {
+
+        width: 100%;
+
+    }
+
+}

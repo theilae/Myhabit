@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Hàbits+</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================
+         CAPÇALERA
+    ====================================== -->
+
+    <header>
+
+        <div>
+
+            <h1>Hàbits+</h1>
+
+            <p>
+                Millora un 1% cada dia 🌱
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================
+         NAVEGACIÓ
+    ====================================== -->
+
+    <nav>
+
+        <button
+            class="nav-boto actiu"
+            data-seccio="inici"
+        >
+            🏠 Inici
+        </button>
+
+        <button
+            class="nav-boto"
+            data-seccio="objectius"
+        >
+            🎯 Objectius
+        </button>
+
+        <button
+            class="nav-boto"
+            data-seccio="mals-habits"
+        >
+            🚫 Mals hàbits
+        </button>
+
+        <button
+            class="nav-boto"
+            data-seccio="estadistiques"
+        >
+            📊 Estadístiques
+        </button>
+
+    </nav>
+
+
+    <main>
+
+
+        <!-- =====================================
+             INICI
+        ====================================== -->
+
+        <section
+            id="inici"
+            class="seccio"
+        >
+
+            <div class="benvinguda">
+
+                <h2>
+                    Els meus hàbits d'avui
+                </h2>
+
+                <p>
+                    Petites accions. Grans canvis.
+                </p>
+
+            </div>
+
+
+            <!-- PROGRÉS -->
+
+            <div class="targeta-progres">
+
+                <div class="cercle-progres">
+
+                    <span id="percentatge">
+                        0%
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        Progrés d'avui
+                    </h3>
+
+                    <p id="missatge-progres">
+                        Comença a crear bons hàbits!
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- HÀBITS -->
+
+            <div class="capcalera-seccio">
+
+                <h2>
+                    Els meus hàbits
+                </h2>
+
+                <button
+                    id="boto-afegir"
+                    class="boto-principal"
+                >
+                    + Afegir
+                </button>
+
+            </div>
+
+
+            <div id="llista-habits">
+
+                <!-- Els hàbits apareixeran aquí -->
+
+            </div>
+
+
+            <!-- FORMULARI -->
+
+            <div
+                id="formulari-container"
+                class="targeta amagat"
+            >
+
+                <h3>
+                    Crear un nou hàbit
+                </h3>
+
+                <input
+                    type="text"
+                    id="nom-habit"
+                    placeholder="Ex.: Llegir 10 minuts"
+                >
+
+                <button
+                    id="boto-crear"
+                    class="boto-principal"
+                >
+                    Crear hàbit
+                </button>
+
+                <button
+                    id="boto-cancelar"
+                    class="boto-secundari"
+                >
+                    Cancel·lar
+                </button>
+
+            </div>
+
+
+            <!-- CONSELL -->
+
+            <div class="consell">
+
+                <h3>
+                    💡 Recorda
+                </h3>
+
+                <p>
+                    No intentis canviar-ho tot alhora.
+                    Comença amb petits hàbits que puguis
+                    repetir cada dia.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             OBJECTIUS
+        ====================================== -->
+
+        <section
+            id="objectius"
+            class="seccio amagada"
+        >
+
+            <h2>
+                🎯 Els meus objectius
+            </h2>
+
+            <p class="descripcio">
+
+                Escriu què vols aconseguir i
+                Hàbits+ et proposarà petits hàbits
+                que et poden ajudar.
+
+            </p>
+
+
+            <div class="targeta">
+
+                <label for="objectiu">
+                    Quin és el teu objectiu?
+                </label>
+
+                <input
+                    type="text"
+                    id="objectiu"
+                    placeholder="Ex.: Vull millorar les meves notes"
+                >
+
+                <button
+                    id="boto-objectiu"
+                    class="boto-principal"
+                >
+                    Veure recomanacions
+                </button>
+
+            </div>
+
+
+            <!-- RECOMANACIONS -->
+
+            <div
+                id="recomanacions"
+                class="recomanacions"
+            >
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             MALS HÀBITS
+        ====================================== -->
+
+        <section
+            id="mals-habits"
+            class="seccio amagada"
+        >
+
+            <h2>
+                🚫 Treballar un mal hàbit
+            </h2>
+
+            <p class="descripcio">
+
+                Explica quin hàbit vols reduir o eliminar
+                i et proposarem una estratègia.
+
+            </p>
+
+
+            <div class="targeta">
+
+                <label for="mal-habit">
+                    Quin hàbit vols canviar?
+                </label>
+
+                <input
+                    type="text"
+                    id="mal-habit"
+                    placeholder="Ex.: Mirar massa el mòbil"
+                >
+
+                <button
+                    id="boto-mal-habit"
+                    class="boto-principal"
+                >
+                    Crear estratègia
+                </button>
+
+            </div>
+
+
+            <div
+                id="estrategia"
+                class="estrategia"
+            >
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             ESTADÍSTIQUES
+        ====================================== -->
+
+        <section
+            id="estadistiques"
+            class="seccio amagada"
+        >
+
+            <h2>
+                📊 Les meves estadístiques
+            </h2>
+
+
+            <div class="estadistiques-grid">
+
+
+                <div class="estadistica">
+
+                    <span>
+                        🌱
+                    </span>
+
+                    <strong id="total-habits">
+                        0
+                    </strong>
+
+                    <p>
+                        Hàbits
+                    </p>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <span>
+                        ✅
+                    </span>
+
+                    <strong id="total-completats">
+                        0
+                    </strong>
+
+                    <p>
+                        Completats
+                    </p>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <span>
+                        🔥
+                    </span>
+
+                    <strong id="racha">
+                        0
+                    </strong>
+
+                    <p>
+                        Racha
+                    </p>
+
+                </div>
+
+
+                <div class="estadistica">
+
+                    <span>
+                        📈
+                    </span>
+
+                    <strong id="mitjana">
+                        0%
+                    </strong>
+
+                    <p>
+                        Progrés
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="targeta">
+
+                <h3>
+                    Progrés actual
+                </h3>
+
+                <div class="barra">
+
+                    <div
+                        id="barra-progres"
+                        class="barra-interior"
+                    ></div>
+
+                </div>
+
+                <p id="text-estadistiques">
+                    Encara estàs començant.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         PEU DE PÀGINA
+    ====================================== -->
+
+    <footer>
+
+        <p>
+            Hàbits+ · Projecte TDR
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
